@@ -128,49 +128,53 @@
 
 @layer components {
   .card-elevated {
-    @apply bg-card rounded-lg border shadow-sm;
+    @apply bg-card rounded-xl border shadow-sm;
     box-shadow: var(--shadow-card);
   }
 
   .kpi-card {
-    @apply bg-card rounded-xl border p-6 transition-all duration-200 hover:shadow-md;
+    @apply bg-card rounded-2xl border p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5;
     box-shadow: var(--shadow-card);
   }
 
   .risk-badge-high {
-    @apply bg-destructive/10 text-destructive border border-destructive/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+    @apply bg-destructive/10 text-destructive border border-destructive/20 px-3 py-1 rounded-full text-xs font-semibold;
   }
 
   .risk-badge-medium {
-    @apply bg-warning/10 text-warning border border-warning/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+    @apply bg-warning/10 text-warning border border-warning/20 px-3 py-1 rounded-full text-xs font-semibold;
   }
 
   .risk-badge-low {
-    @apply bg-success/10 text-success border border-success/20 px-2.5 py-0.5 rounded-full text-xs font-medium;
+    @apply bg-success/10 text-success border border-success/20 px-3 py-1 rounded-full text-xs font-semibold;
   }
 
   .upload-zone {
-    @apply border-2 border-dashed border-border rounded-xl p-8 text-center transition-all duration-200 hover:border-primary hover:bg-primary/5 cursor-pointer;
+    @apply border-2 border-dashed border-border rounded-2xl p-8 text-center transition-all duration-300 hover:border-primary hover:bg-primary/5 cursor-pointer;
   }
 
   .chat-bubble-user {
-    @apply bg-primary text-primary-foreground rounded-2xl rounded-br-md px-4 py-3 max-w-[80%] ml-auto;
+    @apply bg-primary text-primary-foreground rounded-2xl rounded-br-md px-5 py-3 max-w-[80%] ml-auto shadow-md;
   }
 
   .chat-bubble-ai {
-    @apply bg-secondary text-secondary-foreground rounded-2xl rounded-bl-md px-4 py-3 max-w-[80%];
+    @apply bg-secondary text-secondary-foreground rounded-2xl rounded-bl-md px-5 py-3 max-w-[80%] shadow-sm border;
   }
 
   .nav-item {
-    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors;
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200;
   }
 
   .nav-item-active {
-    @apply bg-primary text-primary-foreground;
+    @apply bg-primary text-primary-foreground shadow-md;
   }
 
   .nav-item-inactive {
     @apply text-muted-foreground hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border rounded-2xl;
   }
 }
 
